@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="ngAppDemo">
+<head>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="../angular-nl2br.js"></script>
+  <script src="app.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+        crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+  <div class="page-header"><h1>nl2br example</h1></div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <form class="form">
+        <div class="col-xs-6 form-group">
+          <label for="userInput">Input</label><br/>
+          <textarea id="userInput" type="text" ng-model="userInput" cols="40" rows="10"></textarea>
+        </div>
+        <div class="col-xs-6">
+          <div class="col-xs-12"><strong>normal output</strong></div>
+          <div class="col-xs-12" style="margin: 10px;" ng-bind="userInput"></div>
+          <div class="col-xs-12"><strong>nl2br filter + ng-bind</strong></div>
+          <div class="col-xs-12" style="margin: 10px;" ng-bind="userInput | nl2br"></div>
+          <div class="col-xs-12"><strong>nl2br filter + ng-bind-html</strong></div>
+          <div class="col-xs-12" style="margin: 10px;" ng-bind-html="userInput | nl2br"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
