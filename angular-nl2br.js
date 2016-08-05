@@ -21,4 +21,4 @@ m = angular.module('nl2br', []);
   return m.filter('nl2br', Filter);
 })();
 
-},{}]},{},[1])
+},{}]},{},[1]);
